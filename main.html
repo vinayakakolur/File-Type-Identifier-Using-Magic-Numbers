@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Type Identifier</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial, sans-serif;
+        }
+
+        body{
+            background:#0f172a;
+            color:white;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            min-height:100vh;
+        }
+
+        .container{
+            width:700px;
+            background:#1e293b;
+            padding:30px;
+            border-radius:15px;
+            box-shadow:0 0 20px rgba(0,0,0,0.4);
+        }
+
+        h1{
+            text-align:center;
+            margin-bottom:20px;
+        }
+
+        #select{
+            width:100%;
+            padding:15px;
+            border:none;
+            border-radius:10px;
+            background:#3b82f6;
+            color:white;
+            font-size:16px;
+            cursor:pointer;
+            margin-bottom:20px;
+        }
+
+        #select:hover{
+            background:#2563eb;
+        }
+
+        .results{
+            background:#0f172a;
+            padding:20px;
+            border-radius:10px;
+        }
+
+        .row{
+            margin-bottom:15px;
+        }
+
+        .label{
+            color:#94a3b8;
+            font-size:14px;
+        }
+
+        .value{
+            font-size:18px;
+            margin-top:5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>File Type Identifier</h1>
+
+        <button id="select">Select File</button>
+
+        <input type="file" id="fileInput" hidden>
+
+        <div class="results">
+            <div class="row">
+                <div class="label">File Name</div>
+                <div class="value" id="fileName">-</div>
+            </div>
+
+            <div class="row">
+                <div class="label">Extension</div>
+                <div class="value" id="extension">-</div>
+            </div>
+
+            <div class="row">
+                <div class="label">Magic Number</div>
+                <div class="value" id="magic">-</div>
+            </div>
+
+            <div class="row">
+                <div class="label">Detected Type</div>
+                <div class="value" id="detected">-</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
